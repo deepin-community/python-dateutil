@@ -1,3 +1,80 @@
+python-dateutil (2.9.0-3) unstable; urgency=medium
+
+  * Team upload.
+  * Remove python3-six usage with a patch
+
+ -- Alexandre Detiste <tchet@debian.org>  Sun, 29 Sep 2024 16:21:30 +0200
+
+python-dateutil (2.9.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Register pytest marks (add setup.cfg to test environment)
+
+ -- Julian Gilbey <jdg@debian.org>  Mon, 25 Mar 2024 07:36:09 +0000
+
+python-dateutil (2.9.0-1) unstable; urgency=medium
+
+  [ Andreas Tille ]
+  * Team upload.
+  * Add patch that should solve some DeprecationWarning in Python3.12
+    which affects: #1058414 (of package python-itsdangerous)
+    The patch is *not* applied since it is not sufficient and breaks several
+    other tests in dateutil
+  * Test all supported Python3 versions in autopkgtest (to show the
+    DeprecationWarning for Python3.12)
+
+  [ Julian Gilbey ]
+  * New upstream version (closes: #1063971)
+  * Refresh patches
+  * Remove ancient Breaks field from d/control and update
+    Standards-Version
+  * Remove unused upstream signing-key (no longer appears to be signed
+    upstream)
+  * Add d/upstream/metadata file
+
+ -- Julian Gilbey <jdg@debian.org>  Sun, 24 Mar 2024 21:28:04 +0000
+
+python-dateutil (2.8.2-3) unstable; urgency=medium
+
+  * Team upload
+  * Depend on tzdata-legacy for autopkgtest
+
+ -- Benjamin Drung <bdrung@debian.org>  Thu, 10 Aug 2023 15:05:28 +0200
+
+python-dateutil (2.8.2-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Arnout Vandecappelle ]
+  * Don't fall back on bundled zoneinfo database (Closes: #1003044)
+
+ -- Felix Geyer <fgeyer@debian.org>  Fri, 17 Mar 2023 17:05:45 +0100
+
+python-dateutil (2.8.2-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release 2.8.2
+  * Drop old XB-Python-Version field
+  * Bump watch file version to 4
+  * Bump std-version to 4.6.1
+  * Bump compat level to 13
+  * Add R^3: no
+  * Drop trailing whitespace
+  * New upstream version 2.8.2
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Fri, 14 Oct 2022 13:10:49 +0200
+
+python-dateutil (2.8.1-7) unstable; urgency=medium
+
+  [ Gianfranco Costamagna ]
+  * Team upload
+  * Add Homepage field (Closes: #1019389)
+
+  [ Helmut Grohne ]
+  * Mark python3-dateutils Multi-Arch: foreign (Closes: #1019489)
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Fri, 14 Oct 2022 12:58:34 +0200
+
 python-dateutil (2.8.1-6) unstable; urgency=medium
 
   [ Bastian Germann ]
@@ -270,4 +347,3 @@ python-dateutil (1.0-1) unstable; urgency=low
   * Initial release (Closes: #386256)
 
  -- Guido Guenther <agx@sigxcpu.org>  Wed,  6 Sep 2006 10:33:06 +0200
-
